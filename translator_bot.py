@@ -14,7 +14,7 @@ client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
 def translate(text):
     response = client.messages.create(
-        model="claude-sonnet-4-20250514",
+        model="claude-sonnet-4-6",
         max_tokens=1000,
         messages=[{"role": "user", "content": f"Detect whether the following text is Russian or English. If Russian, translate to English. If English, translate to Russian. Reply with ONLY the translation, no explanations.\n\n{text}"}]
     )
